@@ -1,6 +1,6 @@
 # Getting Started with this App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It is written in TypeScript and uses Yarn for the package manager and script runner. If you do not have Yarn installed on your localhost you'll need to do that first. (Installation instructions)[https://classic.yarnpkg.com/lang/en/docs/install/].
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It is written in TypeScript and uses Yarn for the package manager and script runner. If you do not have Yarn installed on your localhost you'll need to do that first. [Installation instructions](https://classic.yarnpkg.com/lang/en/docs/install/).
 
 ## Available Scripts
 
