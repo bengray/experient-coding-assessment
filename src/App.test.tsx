@@ -1,9 +1,18 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import {
+    render,
+    within
+} from '@testing-library/react'
+import App from './App'
+import userEvent from "@testing-library/user-event"
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe("AutoComplete Tests", () => {
+  it("Test that input field can accept user input", async () => {
+    const { getByTestId } = render(<App />, {})
+
+    const autocomplete = getByTestId('autocomplete-search')
+    const input = within(autocomplete).getByRole('combobox')
+
+    userEvent.type(input, 'Ben')
+    expect(input).toHaveValue('Ben')
+  })
+})
