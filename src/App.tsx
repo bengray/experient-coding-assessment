@@ -74,7 +74,7 @@ const getAdjustedName = (name: string): string => {
   return adjustedName
 }
 
-const changeNameOrder = (usersList: IusersList) => {
+const changeNameOrder = (usersList: IusersList): IusersList => {
   usersList.forEach((user: { name: string, name2: string }) => {
     let newUserName = getAdjustedName(user.name)
     user.name2 = newUserName
