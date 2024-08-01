@@ -100,13 +100,13 @@ function App() {
   return <>{
     !!usersList && (
     <div className="App">
-      <header className="App-header">
+      <div className="App-header">
         <Stack spacing={2} sx={{ width: 300 }}>
           <Autocomplete
             id="autocompleteSearch"
             data-testid='autocomplete-search'
             options={usersList.map((option: { name2: string }) => (option.name2))}
-            renderInput={(params) => <TextField {...params} label="foobar" />}
+            renderInput={(params) => <TextField {...params} label="Start typing to filter users" />}
             onChange={(event, newValue) => {
               let index = usersList.findIndex((user: { name2: string }) => user.name2 === newValue)
               setUserDetails({
@@ -127,7 +127,7 @@ function App() {
             : null
           }
         </Stack>
-      </header>
+      </div>
     </div>
   )}</>
 }
