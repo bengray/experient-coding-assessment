@@ -7,7 +7,7 @@ import Autocomplete from '@mui/material/Autocomplete'
 import { IusersList } from './interfaces/usersList'
 import { Iaddress } from './interfaces/address'
 
-function dynamicSort(property: any) {
+const dynamicSort = (property: any) => {
   // Shameless pull from Stack Overflow
   // Sorts any alpha-numeric array of objects
   let sortOrder = 1
