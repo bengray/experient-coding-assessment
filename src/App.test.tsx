@@ -24,14 +24,14 @@ describe("AutoComplete Tests", () => {
   it('Renders options', async () => {
     render(<App />, {})
 
-    await waitFor(() => expect(screen.getAllByText('Start typing to filter users')).toBeDefined());
+    await waitFor(() => expect(screen.getAllByText('Start typing to filter users')).toBeDefined())
 
-    const combobox = screen.getByRole('combobox');
+    const combobox = screen.getByRole('combobox')
 
-    fireEvent.change(combobox, { target: { value: 'Bauch, Clementine' } });
+    fireEvent.change(combobox, { target: { value: 'Bauch, Clementine' } })
 
-    const listbox = await waitFor(() => screen.getByRole('listbox'), { timeout: 2000 });
+    const listbox = await waitFor(() => screen.getByRole('listbox'), { timeout: 2000 })
 
-    expect(within(listbox).queryAllByRole('option').length).toBeGreaterThan(0);
-  });
+    expect(within(listbox).queryAllByRole('option').length).toBeGreaterThan(0)
+  })
 })
