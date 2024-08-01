@@ -51,7 +51,7 @@ const getAdjustedName = (name: string): string => {
     title = splitName[0]
     splitName = splitName.slice(1)
 
-    // Attach the Title to the first name, so where ever the first name goes, the suffix will follow
+    // Attach the Title to the first name, so where ever the first name goes, the title will follow
     firstName = `${splitName[0]} (${title})`
   } else {
     firstName = splitName[0]
